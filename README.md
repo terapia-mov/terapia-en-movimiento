@@ -9,3 +9,5 @@ Página web de terapia en movimiento
 **Nuestra visión** es trabajar hacia una sociedad que goce de una buena salud mental y emocional, y estamos comprometidos a contribuir al desarrollo de ciudadanos seguros de sí mismos y exitosos en su plan de vida y carrera. Además, nos esforzamos por reducir los indicadores de riesgo social a través de nuestra labor.
 
 En nuestra organización, **valoramos** el respeto hacia nuestros pacientes y sus circunstancias individuales, la empatía por sus experiencias y necesidades, y la responsabilidad en la atención que brindamos. Estos valores son fundamentales para nuestro trabajo y nos guían en cada interacción con nuestros pacientes.
+
+### Proyectos
