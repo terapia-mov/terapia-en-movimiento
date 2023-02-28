@@ -1,0 +1,12 @@
+---
+import MainHead from "./MainHead.astro";
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <MainHead {title} />
+  <body>
+    <slot>Terapia en Movimiento</slot>
+  </body>
+</html>
