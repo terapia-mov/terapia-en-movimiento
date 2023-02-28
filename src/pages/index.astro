@@ -3,7 +3,18 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Terapia en Movimiento">
-  <p class="text-xl font-black uppercase">
-    Bienvenidos a Terapia en Movimiento
-  </p>
+  <header
+    class="min-h-[40rem] relative bg-[url('../images/home-hero.png')] bg-no-repeat bg-cover bg-center"
+  >
+    <div class="relative z-10" id="home-hero-content">
+      <h1 class="text-3xl font-black uppercase text-m-white">
+        Tu bienestar es nuestra prioridad
+      </h1>
+    </div>
+    <div
+      class="absolute inset-0 z-0 bg-gradient-to-r from-m-black opacity-60"
+      id="home-hero-bg-image"
+    >
+    </div>
+  </header>
 </MainLayout>
