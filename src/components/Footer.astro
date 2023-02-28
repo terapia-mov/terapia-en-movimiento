@@ -1,0 +1,17 @@
+---
+---
+
+<footer
+  class="bg-m-dark-blue min-h-[8rem] text-m-white flex flex-col gap-2 items-center justify-center"
+>
+  <h3 class="font-medium uppercase text-center block">Footer placeholder</h3>
+  <small
+    >Terapia en Movimiento &reg; <span id="copyright"></span> | All rights reserved.</small
+  >
+</footer>
+
+<script>
+  document.querySelector("#copyright").textContent = new Date()
+    .getFullYear()
+    .toString();
+</script>

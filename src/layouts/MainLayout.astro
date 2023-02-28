@@ -1,5 +1,7 @@
 ---
+import Nav from "../components/Nav.astro";
 import MainHead from "./MainHead.astro";
+import Footer from "../components/Footer.astro";
 
 const { title } = Astro.props;
 ---
@@ -7,26 +9,8 @@ const { title } = Astro.props;
 <html lang="en">
   <MainHead {title} />
   <body>
-    <!-- Navigation Bar -->
-
-    <nav class="w-full flex justify-between px-8% py-8">
-      <a class="flex gap-6 h-10" href="/">
-        <img src="/images/logo-icon.svg" alt="Company Logo" />
-        <img
-          class="hidden md:block"
-          src="/images/logo-name.svg"
-          alt="Company Name"
-        /></a
-      >
-      <div class="flex items-center">
-        <ul class="hidden md:flex gap-4">
-          <li><a href="/programas">Programas</a></li>
-          <li><a href="">Voluntariado</a></li>
-          <li><a href="">Contacto</a></li>
-        </ul>
-        <div id="burger-menu" class="bg-m-orange w-8 h-8 md:hidden"></div>
-      </div>
-    </nav>
+    <Nav />
     <slot>Terapia en Movimiento</slot>
+    <Footer />
   </body>
 </html>
