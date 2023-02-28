@@ -1,18 +1,31 @@
 ---
+import Button from "../components/button.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Terapia en Movimiento">
   <header
-    class="min-h-[40rem] relative bg-[url('../images/home-hero.png')] bg-no-repeat bg-cover bg-center"
+    class="min-h-[30rem] px-8% pt-80 pb-28 relative bg-[url('../images/home-hero.png')] bg-no-repeat bg-cover bg-center"
   >
-    <div class="relative z-10" id="home-hero-content">
-      <h1 class="text-3xl font-black uppercase text-m-white">
+    <!--Hero Section Content -->
+    <div
+      class="relative z-10 max-w-xl flex flex-col items-start gap-4 text-white"
+      id="home-hero-content"
+    >
+      <h1 class="text-3xl font-black uppercase md:text-5xl md:leading-tight">
         Tu bienestar es nuestra prioridad
       </h1>
+      <p class="text-sm md:text-lg">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum neque
+        consequatur debitis eius, dolor voluptates quia.
+      </p>
+      <Button color="bg-orange" href="/programas" text="Conócenos" />
     </div>
+
+    <!--Hero Section Gradient-->
+
     <div
-      class="absolute inset-0 z-0 bg-gradient-to-r from-m-black opacity-60"
+      class="absolute inset-0 z-0 bg-gradient-to-t from-black opacity-60"
       id="home-hero-bg-image"
     >
     </div>

@@ -1,0 +1,16 @@
+---
+const { text, href, color } = Astro.props;
+---
+
+<a
+  class:list={[
+    "px-6",
+    "py-2",
+    "rounded-lg",
+    "font-medium",
+    "hover:scale-105",
+    "transition-transform",
+    color,
+  ]}
+  href={href}>{text}</a
+>
