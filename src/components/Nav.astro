@@ -13,8 +13,31 @@ import navLinks from "../data/navLinks";
   </a>
   <div class="flex items-center">
     <ul class="hidden md:flex gap-8 lg:gap-16">
-      {navLinks.map((item) => <a href={item.path}>{item.name}</a>)}
+      {
+        navLinks.map((item) => (
+          <a href={item.path} data-navLink>
+            {item.name}
+          </a>
+        ))
+      }
     </ul>
     <div id="burger-menu" class="bg-m-pink w-8 h-8 md:hidden"></div>
   </div>
 </nav>
+
+<style>
+  [aria-current="page"] {
+    text-decoration: underline;
+    font-weight: 500;
+  }
+</style>
+
+<script>
+  const navLinks = document.querySelectorAll("[data-navLink]");
+
+  navLinks.forEach((link) => {
+    if (link.getAttribute("href") === window.location.pathname) {
+      link.setAttribute("aria-current", "page");
+    }
+  });
+</script>
