@@ -5,7 +5,13 @@ module.exports = {
     fontFamily: {
       sans: ["GeneralSans-Variable", "Arial", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      spacing: {
+        "5%": "5%",
+        "8%": "8%",
+        "10%": "10%",
+      },
+    },
   },
   plugins: [],
 };
