@@ -32,9 +32,38 @@ import { Icon } from "astro-icon";
     >
     </div>
   </header>
-  <main class="px-8% md:px-15% py-10">
-    <!--About Section Image -->
-    <!--About Section Text -->
+  <main class="px-8% md:px-15% py-20">
+    <!--About Section -->
+    <div class="w-full md:my-20 md:flex items-center gap-12">
+      <!--About Image -->
+      <div class="relative">
+        <img
+          src="/images/about.jpg"
+          alt="Person writing in journal in a conference/class"
+          class="relative z-10 rounded-full aspect-square w-96"
+        />
+        <div
+          id="about-image-accent"
+          class="absolute inset-0 z-0 rounded-full aspect-square bg-orange -translate-x-2 translate-y-2"
+        >
+        </div>
+      </div>
+      <!--About Content -->
+      <div
+        class="py-10 md:w-3/4 flex flex-col justify-center items-start gap-2"
+      >
+        <h4 class="font-semibold text-blue text-xs md:text-base">
+          Acerca de Nosotros
+        </h4>
+        <h2 class="font-bold text-2xl sm:text-3xl uppercase">
+          Nuestro movimiento
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur. Dolor nulla tristique molestie
+          egestas magnis enim. Gravida congue eget risus imperdiet sit.
+        </p>
+      </div>
+    </div>
     <!--MVV Section -->
     <div
       id="mision"
