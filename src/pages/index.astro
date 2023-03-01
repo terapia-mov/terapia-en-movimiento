@@ -32,15 +32,56 @@ import { Icon } from "astro-icon";
     >
     </div>
   </header>
-  <main>
+  <main class="px-8% md:px-15% py-10">
     <!--About Section Image -->
     <!--About Section Text -->
     <!--MVV Section -->
-    <div>
+    <div
+      id="mision"
+      class="my-10 py-6 border-solid border-b-2 flex gap-4 md:gap-8 flex-wrap items-center md:my-16 md:pb-12"
+    >
       <Icon
         name="ic:baseline-star"
-        class="text-white bg-dark-blue rounded-full w-8 p-2"
+        class="text-white bg-dark-blue rounded-full w-8 h-8 p-2 md:w-10 md:h-10"
       />
+      <h3 class="text-xl font-medium flex-grow md:text-2xl">Misión</h3>
+      <p class="basis-3/4 flex-grow">
+        La misión de nuestra organización es ofrecer servicios de atención
+        psicológica en los diferentes contextos de la vida cotidiana a niños,
+        niñas, adolescentes y adultos, con el objetivo de mejorar su bienestar
+        emocional y psicológico.
+      </p>
+    </div>
+    <div
+      id="vision"
+      class="my-10 py-6 border-solid border-b-2 flex gap-4 md:gap-8 flex-wrap items-center md:my-16 md:pb-12"
+    >
+      <Icon
+        name="ic:baseline-remove-red-eye"
+        class="text-white bg-dark-blue rounded-full w-8 h-8 p-2 md:w-10 md:h-10"
+      />
+      <h3 class="text-xl font-medium flex-grow md:text-2xl">Visión</h3>
+      <p class="basis-3/4 flex-grow">
+        Nuestra visión es trabajar hacia una sociedad que goce de una buena
+        salud mental y emocional, y estamos comprometidos a contribuir al
+        desarrollo de ciudadanos seguros de sí mismos y exitosos en su plan de
+        vida y carrera.
+      </p>
+    </div>
+    <div
+      id="valores"
+      class="my-10 py-6 border-solid border-b-2 flex gap-4 md:gap-8 flex-wrap items-center md:my-16 md:pb-12"
+    >
+      <Icon
+        name="ic:baseline-person"
+        class="text-white bg-dark-blue rounded-full w-8 h-8 p-2 md:w-10 md:h-10"
+      />
+      <h3 class="text-xl font-medium flex-grow md:text-2xl">Valores</h3>
+      <p class="basis-3/4 flex-grow">
+        En nuestra organización, valoramos el respeto hacia nuestros pacientes y
+        sus circunstancias individuales, la empatía por sus experiencias y
+        necesidades, y la responsabilidad en la atención que brindamos.
+      </p>
     </div>
   </main>
 </MainLayout>

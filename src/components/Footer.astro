@@ -1,17 +1,91 @@
 ---
+import { Icon } from "astro-icon";
+
+//data imports
+import navLinks from "../data/navLinks";
 ---
 
 <footer
-  class="bg-dark-blue min-h-[8rem] text-white flex flex-col gap-2 items-center justify-center"
+  class="bg-dark-blue min-h-[8rem] text-white py-8 px-8% flex flex-col gap-8 items-center justify-center"
 >
-  <h3 class="font-medium uppercase text-center block">Footer placeholder</h3>
-  <small
-    >Terapia en Movimiento &reg; <span id="copyright"></span> | All rights reserved.</small
-  >
+  <!--Home Link -->
+  <a href="/" class="flex flex-col items-center gap-2">
+    <Icon name="logomark" class="w-12" />
+    <h3 class="text-xs uppercase text-center block">
+      <span class="font-bold text-2xl">Terapia</span>
+      <br /> en Movimiento
+    </h3>
+  </a>
+
+  <!--Navigation Links -->
+  <nav class="w-full">
+    <ul class="flex justify-between md:justify-center lg:gap-16">
+      {
+        navLinks.map((item) => (
+          <a
+            class="transition-all hover:font-normal font-light text-xs md:text-lg"
+            href={item.path}
+            data-navLink
+          >
+            {item.name}
+          </a>
+        ))
+      }
+    </ul>
+  </nav>
+
+  <!--Divider Line -->
+  <div id="footer-spacer" class="h-[.1rem] w-full bg-white"></div>
+
+  <!--Social Media Icons -->
+  <ul class="text-dark-blue h-8 w-3/4 max-w-md flex justify-around">
+    <li>
+      <a href="https://instagram.com" target="_blank"
+        ><Icon name="ci:instagram" class="w-8 p-1 rounded-full bg-white" /></a
+      >
+    </li>
+    <li>
+      <a href="https://facebook.com" target="_blank"
+        ><Icon
+          name="fa-brands:facebook"
+          class="w-8 text-white rounded-full"
+        /></a
+      >
+    </li>
+    <li>
+      <a href="https://linkedin.com" target="_blank"
+        ><Icon name="ci:linkedin" class="w-8 p-1 rounded-full bg-white" /></a
+      >
+    </li>
+  </ul>
+
+  <!--Copyright legend -->
+  <small class="font-medium text-center text-xs">
+    Terapia en Movimiento &reg; <span id="copyright"></span> | Todos los derechos
+    reservados.
+  </small>
 </footer>
 
+<!--Styles the "current page" link -->
+<style>
+  [aria-current="page"] {
+    text-decoration: underline;
+    font-weight: 400;
+  }
+</style>
+
 <script>
+  //Updates year automatically
   document.querySelector("#copyright").textContent = new Date()
     .getFullYear()
     .toString();
+
+  //Assings an "aria-current" "page" to the link when on that page
+  const navLinks = document.querySelectorAll("[data-navLink]");
+
+  navLinks.forEach((link) => {
+    if (link.getAttribute("href") === window.location.pathname) {
+      link.setAttribute("aria-current", "page");
+    }
+  });
 </script>
