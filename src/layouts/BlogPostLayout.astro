@@ -1,0 +1,16 @@
+---
+//component import
+import BlogPostHeader from "../components/BlogPostHeader.astro";
+import MainLayout from "./MainLayout.astro";
+
+const { frontmatter } = Astro.props;
+
+const { title, date, author, image, description, category } = frontmatter;
+---
+
+<MainLayout {title} {description}>
+  <BlogPostHeader {title} {description} {date} {author} {image} {category} />
+  <div class="px-8% py-8">
+    <slot />
+  </div>
+</MainLayout>

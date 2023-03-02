@@ -1,0 +1,35 @@
+---
+//library import
+import { Image } from "@astrojs/image/components";
+// utils imports
+import { slugify, formatDate } from "../js/utils";
+const { title, date, author, image, description, category } = Astro.props;
+---
+
+<header class="flex flex-col">
+  <Image
+    src={image.src}
+    alt={image.alt}
+    width={1920}
+    aspectRatio="10:4"
+    format="webp"
+    fit="cover"
+    class="pb-10"
+  />
+  <div
+    id="head-content"
+    class="px-8% flex flex-col items-center justify-center gap-2 text-center"
+  >
+    <small
+      class="px-4 py-2 mb-4 rounded-lg bg-yellow text-white font-semibold text-[.5rem] leading-none uppercase"
+      ><a href={`/category/${slugify(category)}`}>{category}</a></small
+    >
+    <h1 class="font-bold text-3xl uppercase">{title}</h1>
+    <p id="post-description" class="text-xs w-3/4">{description}</p>
+    <p class="mt-4">
+      por <a class="underline font-semibold" href={`/author/${slugify(author)}`}
+        >{author}</a
+      > | {formatDate(date)}
+    </p>
+  </div>
+</header>
