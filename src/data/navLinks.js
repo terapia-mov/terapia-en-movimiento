@@ -1,12 +1,12 @@
 const navLinks = [
-  {
-    name: "Programas",
+  /*{
+    /*name: "Programas",
     path: "/programas",
   },
   {
     name: "Voluntariado",
     path: "/voluntariado",
-  },
+  },*/
   {
     name: "Blog",
     path: "/blog",
