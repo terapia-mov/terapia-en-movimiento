@@ -2,9 +2,9 @@
 layout: "../../layouts/BlogPostLayout.astro"
 title: "Deportivamente"
 date: 2023-03-02
-author: Jonathan
+author: Psic. Jonathan Navarro
 image: { src: "/images/deportivamente.jpg", alt: "Personas entrenando" }
-description: "Programa gubernamental del estado de Nuevo León en conjunto con Terapia en Movimiento"
+description: "Es un programa que ofrece clases de Boxeo y Terapia psicológica gratiuitas con Coaches y Psicólogos certificados, para personas de 6 años de edad en adelante. En conjunto con el Gobierno del Estado de Nuevo León."
 draft: false
 category: Programa
 ---

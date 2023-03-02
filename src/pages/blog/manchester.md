@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogPostLayout.astro"
 title: "Manchester City"
 date: 2023-03-02
-author: Jonathan
+author: Psic. Jonathan Navarro
 image: { src: "/images/manchester.jpg", alt: "Niños entrenando" }
 description: "Campamento oficial del Club de Futbol de Manchester City con la finalidad de entrenar y enseñar inglés británico a niños de entre 9 y 17 años de edad."
 draft: false

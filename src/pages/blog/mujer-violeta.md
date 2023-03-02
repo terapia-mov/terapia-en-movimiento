@@ -2,13 +2,13 @@
 layout: "../../layouts/BlogPostLayout.astro"
 title: "Mujer Violeta"
 date: 2023-03-02
-author: Jonathan
+author: Psic. Jonathan Navarro
 image:
   {
     src: "/images/mujer-violeta.jpg",
     alt: "Mujeres vestidas de Violeta abrazandose",
   }
-description: "Programa gubernamental del estado de Nuevo León en conjunto con Terapia en Movimiento"
+description: "Es un programa que ofrece terapias psicológicas y asesorías legales para mujeres en situaciones de violencia. En conjunto con el Gobierno del Estado de Nuevo León."
 draft: false
 category: Programa
 ---
