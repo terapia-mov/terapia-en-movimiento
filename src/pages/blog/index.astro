@@ -1,13 +1,19 @@
 ---
 import BlogCard from "../../components/BlogCard.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
+import SecondaryHeader from "../../layouts/SecondaryHeader.astro";
 ---
 
 <MainLayout title="Blog">
-  <header class="min-h-[80vh] flex flex-col items-center justify-center gap-4">
-    <h1 class="font-bold text-3xl uppercase">Nuestro Blog</h1>
+  <SecondaryHeader
+    src="images/blog.jpg"
+    alt="Logo shapes in a line"
+    title="Nuestro Blog"
+    description="Terapia en Movimiento es un espacio seguro en donde esperamos facilitar información importante acerca de como mantener una buena salud mental."
+  />
+  <main class="px-8% flex flex-wrap gap-8 pb-12">
     <BlogCard />
     <BlogCard />
     <BlogCard />
-  </header>
+  </main>
 </MainLayout>

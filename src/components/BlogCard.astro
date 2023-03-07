@@ -1,9 +1,21 @@
 ---
+import { Image } from "@astrojs/image/components";
+import Button from "./button.astro";
 ---
 
-<div>
-  <img src="" alt="" />
-  <h3 class="text-lg font-black">Esto es la tarjeta</h3>
-  <p>Actualización EMR</p>
-  <button></button>
+<div class="flex flex-col basis-60 flex-grow gap-2 items-start">
+  <Image
+    src={"images/mujer-violeta.jpg"}
+    alt={"Mujeres abrazandoce"}
+    width={1920}
+    aspectRatio={"16:9"}
+    format={"webp"}
+    fit={"cover"}
+  />
+  <h3 class="text-lg font-black uppercase">Título del Blog</h3>
+  <p>
+    Lorem ipsum dolor sit amet consectetur. Elementum diam metus euismod
+    volutpat feugiat. Enim est sed non et.
+  </p>
+  <Button color="bg-blue" text="Leer Más" />
 </div>
