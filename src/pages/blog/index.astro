@@ -1,7 +1,12 @@
 ---
-import BlogCard from "../../components/BlogCard.astro";
+//Layout imports
 import MainLayout from "../../layouts/MainLayout.astro";
 import SecondaryHeader from "../../layouts/SecondaryHeader.astro";
+//Component imports
+import BlogCard from "../../components/BlogCard.astro";
+//Data imports
+const allPosts = await Astro.glob("./*.md");
+console.log(allPosts);
 ---
 
 <MainLayout title="Blog">
@@ -12,8 +17,6 @@ import SecondaryHeader from "../../layouts/SecondaryHeader.astro";
     description="Terapia en Movimiento es un espacio seguro en donde esperamos facilitar información importante acerca de como mantener una buena salud mental."
   />
   <main class="px-8% flex flex-wrap gap-8 pb-12">
-    <BlogCard />
-    <BlogCard />
-    <BlogCard />
+    {allPosts.map((post) => <BlogCard {post} />)}
   </main>
 </MainLayout>
