@@ -4,9 +4,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import SecondaryHeader from "../../layouts/SecondaryHeader.astro";
 //Component imports
 import BlogCard from "../../components/BlogCard.astro";
-//Content data import
+//Library import
 import { contentfulClient } from "../../lib/contentful";
-
+//Content data import
 const entries = await contentfulClient.getEntries({ content_type: "blogPost" });
 ---
 
