@@ -1,5 +1,15 @@
 import contentful from "contentful";
 
+export interface BlogPost {
+  title: string;
+  description: string;
+  category: string;
+  content: any;
+  slug: string;
+  date: string;
+  image: any;
+}
+
 export const contentfulClient = contentful.createClient({
   space: import.meta.env.CONTENTFUL_SPACE_ID,
   accessToken: import.meta.env.DEV

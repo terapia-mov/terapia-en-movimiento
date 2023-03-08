@@ -3,16 +3,17 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 //Library import
 import { contentfulClient } from "../../lib/contentful";
+import { BlogPost } from "../../lib/contentful";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { Image } from "@astrojs/image/components";
 import { tagColor } from "../../js/utils";
 //Content data import
 export async function getStaticPaths() {
-  const { items } = await contentfulClient.getEntries({
+  const entries = await contentfulClient.getEntries<BlogPost>({
     content_type: "blogPost",
   });
 
-  const pages = items.map((item) => ({
+  const pages = entries.items.map((item) => ({
     params: { slug: item.fields.slug },
     props: {
       title: item.fields.title,
@@ -31,6 +32,8 @@ export async function getStaticPaths() {
 
 //Astro props
 const { title, description, content, image, category } = Astro.props;
+
+import "../../styles/blogPost.css";
 ---
 
 <MainLayout>
@@ -46,25 +49,28 @@ const { title, description, content, image, category } = Astro.props;
     />
     <div
       id="head-content"
-      class="px-8% pb-10 flex flex-col items-center justify-center gap-2 text-center"
+      class="px-8% pb-10 flex flex-col items-center justify-center gap-2 md:gap-4 text-center"
     >
       <small
         class:list={[
           "font-medium",
           "text-white",
           "text-[.5rem]",
+          "md:text-[.75rem]",
+          "md:px-[2.5]",
           "px-2",
           "py-1",
           "rounded-full",
+          "leading-none",
           tagColor(category),
         ]}>{category}</small
       >
-      <h1 class="font-bold text-3xl uppercase">{title}</h1>
-      <p class="text-xs w-3/4">{description}</p>
+      <h1 class="font-bold text-3xl md:text-5xl uppercase">{title}</h1>
+      <p class="text-xs w-full md:w-2/5 md:text-sm">{description}</p>
     </div>
   </header>
   <!--Post content -->
-  <div class="px-8% pb-10 flex flex-col gap-2">
-    {content}
+  <div class="px-8% pb-10 flex flex-col gap-4">
+    <article set:html={content} class="flex flex-col gap-4 leading-normal" />
   </div>
 </MainLayout>

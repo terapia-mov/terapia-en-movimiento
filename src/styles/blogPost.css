@@ -1,0 +1,41 @@
+article h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+article h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+article h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+article h4 {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+article b {
+  font-weight: 600;
+}
+
+article a {
+  color: #869dc1;
+  transition: color 0.2s ease;
+}
+
+article a:hover {
+  color: #f1cb7e;
+}
+
+article a:visited {
+  color: #e5a861;
+}
+
+article a:active {
+  color: #e5a861;
+}
