@@ -4,7 +4,9 @@ import Button from "./button.astro";
 
 const { post } = Astro.props;
 
-const { title, description, image, category, slug } = post.fields;
+const { title, description, author, date, image, category, slug } = post.fields;
+
+const formatDate = new Date(date).toLocaleDateString();
 
 import { tagColor } from "../js/utils";
 ---
@@ -26,13 +28,20 @@ import { tagColor } from "../js/utils";
         "font-medium",
         "text-white",
         "text-[.5rem]",
+        "md:text-[.75rem]",
+        "md:px-[2.5]",
         "px-2",
         "py-1",
         "rounded-full",
+        "leading-none",
         tagColor(category),
       ]}>{category}</small
     >
-    <h3 class="text-lg font-black uppercase">{title}</h3>
+    <p class="text-xs md:text-sm">
+      <span class="font-medium">{author}</span> | {formatDate}
+    </p>
+    <h3 class="text-xl md:text-2xl font-black uppercase">{title}</h3>
+
     <p class="pb-6">{description}</p>
     <Button color="bg-blue" text="Leer Más" href={`/blog/${slug}`} />
   </div>

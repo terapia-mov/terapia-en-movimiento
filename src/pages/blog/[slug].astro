@@ -18,6 +18,7 @@ export async function getStaticPaths() {
     props: {
       title: item.fields.title,
       description: item.fields.description,
+      author: item.fields.author,
       category: item.fields.category,
       content: documentToHtmlString(item.fields.content),
       date: new Date(item.fields.date).toLocaleDateString(),
@@ -31,7 +32,7 @@ export async function getStaticPaths() {
 }
 
 //Astro props
-const { title, description, content, image, category } = Astro.props;
+const { title, date, author, content, image, category } = Astro.props;
 
 import "../../styles/blogPost.css";
 ---
@@ -66,7 +67,9 @@ import "../../styles/blogPost.css";
         ]}>{category}</small
       >
       <h1 class="font-bold text-3xl md:text-5xl uppercase">{title}</h1>
-      <p class="text-xs w-full md:w-2/5 md:text-sm">{description}</p>
+      <p class="text-xs md:text-sm">
+        <span class="font-medium">{author}</span> | {date}
+      </p>
     </div>
   </header>
   <!--Post content -->

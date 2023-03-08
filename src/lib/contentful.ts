@@ -7,6 +7,7 @@ export interface BlogPost {
   content: any;
   slug: string;
   date: string;
+  author: string;
   image: any;
 }
 
