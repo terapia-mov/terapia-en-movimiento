@@ -27,7 +27,7 @@ const { title, date, author, image, description, category } = Astro.props;
     <h1 class="font-bold text-3xl uppercase">{title}</h1>
     <p id="post-description" class="text-xs w-3/4">{description}</p>
     <p class="mt-4">
-      por <a class="underline font-semibold" href={`/author/${slugify(author)}`}
+      <a class="underline font-semibold" href={`/author/${slugify(author)}`}
         >{author}</a
       > | {formatDate(date)}
     </p>

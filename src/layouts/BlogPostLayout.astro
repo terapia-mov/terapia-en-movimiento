@@ -3,9 +3,7 @@
 import BlogPostHeader from "../components/BlogPostHeader.astro";
 import MainLayout from "./MainLayout.astro";
 
-const { frontmatter } = Astro.props;
-
-const { title, date, author, image, description, category } = frontmatter;
+const { title, description, image, category, slug } = Astro.props;
 ---
 
 <MainLayout {title} {description}>

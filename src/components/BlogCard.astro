@@ -6,19 +6,7 @@ const { post } = Astro.props;
 
 const { title, description, image, category, slug } = post.fields;
 
-const tagColor = (category: string) => {
-  let color = "";
-  if (category === "Programa") {
-    color = "bg-yellow";
-    return color;
-  } else if (category === "Publicación") {
-    color = "bg-pink";
-    return color;
-  } else {
-    color = "bg-blue";
-    return color;
-  }
-};
+import { tagColor } from "../js/utils";
 ---
 
 <article
