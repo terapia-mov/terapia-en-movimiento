@@ -17,7 +17,7 @@ const entries = await contentfulClient.getEntries({ content_type: "blogPost" });
     title="Nuestro Blog"
     description="Terapia en Movimiento es un espacio seguro en donde esperamos facilitar información importante acerca de como mantener una buena salud mental."
   />
-  <main class="px-8% flex flex-wrap gap-8 pb-12">
+  <main class="px-8% grid grid-cols-1 lg:grid-cols-2 gap-8 pb-12">
     {entries.items.map((post) => <BlogCard {post} />)}
   </main>
 </MainLayout>
