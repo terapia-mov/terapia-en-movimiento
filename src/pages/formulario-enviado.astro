@@ -1,0 +1,18 @@
+---
+import Button from "../components/button.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import SecondaryHeader from "../layouts/SecondaryHeader.astro";
+---
+
+<MainLayout title="Formulario Enviado">
+  <SecondaryHeader src="/images/contact.png" alt="Main section image" />
+  <main
+    class="pt-20 pb-40 px-8% flex flex-col gap-2 items-center justify-center"
+  >
+    <h1 class="text-3xl font-black uppercase md:text-5xl md:leading-tight">
+      Gracias por tu mensaje!
+    </h1>
+    <p>Recibimos tu mensaje tu nos pondremos en contacto a la brevedad.</p>
+    <Button color="bg-pink" text="Ir a Inicio" href="/" />
+  </main>
+</MainLayout>

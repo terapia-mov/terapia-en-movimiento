@@ -13,49 +13,38 @@ import { Icon } from "astro-icon";
     src="/images/contact.png"
     alt="Main section image"
     title="Ponte en Contacto"
-    description="Lorem ipsum dolor sit amet consectetur. At sed morbi in aliquet quam. Odio nibh facilisis eros tortor. Rhoncus amet a dictum diam dolor."
+    description="Utiliza cualquiera de los links o envíanos un mensaje a través del formulario de contacto de abajo."
   />
   <!--Contact links with Icons -->
   <main class="px-8% pb-12">
     <ul class="flex flex-col flex-wrap sm:flex-row gap-8 md:gap-12">
       <li>
         <a
-          href="/contacto"
+          href="mailto:terapia.mov.ac@gmail.com"
           class="flex gap-4 items-center hover:font-medium transition-all hover:scale-102"
         >
           <Icon
             name="ic:baseline-mail"
             class="text-white bg-dark-blue rounded-full w-8 h-8 p-2 md:w-10 md:h-10"
           />
-          contacto@terapiaenmovimiento.org</a
+          terapia.mov.ac@gmail.com</a
         >
       </li>
       <li>
         <a
-          href="/contacto"
+          href="tel:+52 81 2003 3548"
           class="flex gap-4 items-center hover:font-medium transition-all hover:scale-102"
         >
           <Icon
             name="ic:baseline-phone"
             class="text-white bg-dark-blue rounded-full w-8 h-8 p-2 md:w-10 md:h-10"
           />
-          888-777-9999</a
+          81-2003-3548</a
         >
         <li>
           <a
-            href="/contacto"
-            class="flex gap-4 items-center hover:font-medium transition-all hover:scale-102"
-          >
-            <Icon
-              name="ci:instagram"
-              class="text-white bg-dark-blue rounded-full w-8 h-8 p-2 md:w-10 md:h-10"
-            />
-            @terapia.mov.ac</a
-          >
-        </li>
-        <li>
-          <a
-            href="/contacto"
+            href="https://facebook.com/terapiamov"
+            target="_blank"
             class="flex gap-4 items-center hover:font-medium transition-all hover:scale-102"
           >
             <Icon
@@ -67,7 +56,34 @@ import { Icon } from "astro-icon";
         </li>
         <li>
           <a
-            href="/contacto"
+            href="https://instagram.com/terapia.mov.ac"
+            target="_blank"
+            class="flex gap-4 items-center hover:font-medium transition-all hover:scale-102"
+          >
+            <Icon
+              name="ci:instagram"
+              class="text-white bg-dark-blue rounded-full w-8 h-8 p-2 md:w-10 md:h-10"
+            />
+            @terapia.mov.ac</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/Terapia_Mov"
+            target="_blank"
+            class="flex gap-4 items-center hover:font-medium transition-all hover:scale-102"
+          >
+            <Icon
+              name="ci:twitter"
+              class="text-white bg-dark-blue rounded-full w-8 h-8 p-2 md:w-10 md:h-10"
+            />
+            Terapia en Movimiento</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/terapia-en-movimiento-a-c-518821231/"
+            target="_blank"
             class="flex gap-4 items-center hover:font-medium transition-all hover:scale-102"
           >
             <Icon
@@ -82,10 +98,11 @@ import { Icon } from "astro-icon";
   </main>
   <!--Contact Form -->
   <form
-    action=""
-    method="get"
+    action="https://api.web3forms.com/submit"
+    method="POST"
     class="px-8% flex flex-wrap gap-4 md:gap-8 pb-12"
   >
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
     <div class="flex flex-col flex-grow gap-2 basis-full sm:basis-1/3">
       <label for="nombre">*Nombre</label>
       <input
@@ -130,6 +147,7 @@ import { Icon } from "astro-icon";
         name="mensaje"
         id="mensaje"></textarea>
     </div>
+    <input type="hidden" name="redirect" value="/formulario-enviado" />
     <div>
       <input
         type="submit"
