@@ -1,0 +1,71 @@
+---
+//Layout import
+import MainLayout from "../../layouts/MainLayout.astro";
+//Library import
+import { Image } from "@astrojs/image/components";
+import { tagColor } from "../../js/utils";
+
+//Styles import
+import "../../styles/blogPost.css";
+---
+
+<MainLayout>
+  <!--Post header -->
+  <header class="flex flex-col gap-10">
+    <Image
+      src="/images/manchester.jpg"
+      alt="Equipo del Manchester City rodeando a su entrenador"
+      width={1920}
+      aspectRatio="10:4"
+      format="webp"
+      fit="cover"
+    />
+    <div
+      id="head-content"
+      class="px-8% pb-10 flex flex-col items-center justify-center gap-2 md:gap-4 text-center"
+    >
+      <small
+        class:list={[
+          "font-medium",
+          "text-white",
+          "text-[.5rem]",
+          "md:text-[.75rem]",
+          "md:px-[2.5]",
+          "px-2",
+          "py-1",
+          "rounded-full",
+          "leading-none",
+          tagColor("Programa"),
+        ]}>Programa</small
+      >
+      <h1 class="font-bold text-3xl md:text-5xl uppercase">
+        CAMPAMENTO MANCHESTER CITY
+      </h1>
+      <p class="text-xs md:text-sm">
+        <span class="font-medium">Psic. Jonathan Navarro</span> | 06/09/2023
+      </p>
+    </div>
+  </header>
+  <!--Post content -->
+  <div class="px-8% pb-10 flex flex-col gap-4">
+    <article class="flex flex-col gap-4 leading-normal">
+      <p>
+        El City Football Language School es un programa de inglés y fútbol en
+        Inglaterra donde se busca que jugadores (de 9 a 17 años) aprendan y
+        desarrollen habilidades interpersonales clave mientras juegan junto a
+        futbolistas de todo el mundo en el club Manchester City.
+      </p>
+      <strong>El programa incluye</strong>
+      <Image
+        src="/images/city-info.jpeg"
+        alt="Equipo del Manchester City rodeando a su entrenador"
+        width={1920}
+        aspectRatio="16:10"
+        format="webp"
+        fit="cover"
+      />
+      <strong>Precios:</strong>
+      <p>1 semana 1,785 Euros <br /> 2 semanas 3,570 Euros</p>
+    </article>
+  </div>
+</MainLayout>

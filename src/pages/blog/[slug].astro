@@ -35,6 +35,8 @@ export async function getStaticPaths() {
 const { title, date, author, content, image, category } = Astro.props;
 
 import "../../styles/blogPost.css";
+
+console.log({ content });
 ---
 
 <MainLayout>
