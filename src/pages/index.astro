@@ -218,7 +218,12 @@ import { Icon } from "astro-icon";
       </div>
     </article>
     <!--Psicología Empresarial -->
-    <article class="sm:flex sm:flex-row-reverse">
+    <article class="sm:flex">
+      <img
+        src="/images/empresarial.jpg"
+        alt="Personas en un gimnasio de box, descansando."
+        class="aspect-square object-cover sm:w-2/5"
+      />
       <div
         class="px-8% py-20 bg-yellow flex flex-col gap-2 sm:gap-4 items-start justify-center"
       >
@@ -237,11 +242,53 @@ import { Icon } from "astro-icon";
           text="Más Información"
         />
       </div>
+    </article>
+    <!--imedysinc-->
+    <article class="sm:flex sm:flex-row-reverse">
       <img
-        src="/images/empresarial.jpg"
-        alt="Personas en un gimnasio de box, descansando."
+        src="/images/imedisync.jpeg"
+        alt="Imagen de una cabeza con el casco de Imedisync."
         class="aspect-square object-cover sm:w-2/5"
       />
+      <div
+        class="px-8% py-20 bg-off-white flex flex-col gap-2 sm:gap-4 items-start justify-center"
+      >
+        <h2 class="font-bold text-2xl sm:text-3xl uppercase">imedysinc</h2>
+        <p class="mb-2">
+          iSyncWave es el primer dispositivo neuroterapéutico y EEG integrado
+          que brinda atención telemental a través de una plataforma digital de
+          salud cerebral con inteligencia artificial.
+        </p>
+        <Button
+          color="bg-dark-blue"
+          href="/blog/imedysinc"
+          text="Más Información"
+        />
+      </div>
+    </article>
+    <!--Consultorio Psicológico-->
+    <article class="sm:flex">
+      <img
+        src="/images/consulta.jpg"
+        alt="Imagen de un consultorio psicológico"
+        class="aspect-square object-cover sm:w-2/5"
+      />
+      <div
+        class="px-8% py-20 bg-blue flex flex-col gap-2 sm:gap-4 items-start justify-center"
+      >
+        <h2 class="font-bold text-2xl sm:text-3xl uppercase">
+          Consultorio Psicológico
+        </h2>
+        <p class="mb-2">
+          Atención psicológica individual, pareja y familia , dentro de la
+          clínica monterrey, consultorio 235.
+        </p>
+        <Button
+          color="bg-dark-blue"
+          href="/blog/imedysinc"
+          text="Más Información"
+        />
+      </div>
     </article>
   </section>
 </MainLayout>
