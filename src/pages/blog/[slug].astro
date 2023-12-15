@@ -26,15 +26,17 @@ export async function getStaticPaths() {
         src: item.fields.image.fields.file.url,
         alt: item.fields.image.description,
       },
-      extraImages: item.fields.extraImages;
     },
   }));
   return pages;
 }
 
+console.log(Astro.props);
+
 //Astro props
-const { title, date, author, content, image, category, extraImages } =
-  Astro.props;
+const { title, date, author, content, image, category } = Astro.props;
+
+console.log(Astro.props);
 
 import "../../styles/blogPost.css";
 ---
