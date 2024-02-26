@@ -13,6 +13,16 @@ export async function getStaticPaths() {
     content_type: "blogPost",
   });
 
+  const options = {
+    renderNode: {
+      "embedded-asset-block": (node) => {
+        const { title, file } = node.data.target.fields;
+        const { url } = file;
+        return `<img src="${url}" alt="${title}" />`;
+      },
+    },
+  };
+
   const pages = entries.items.map((item) => ({
     params: { slug: item.fields.slug },
     props: {
@@ -20,11 +30,11 @@ export async function getStaticPaths() {
       description: item.fields.description,
       author: item.fields.author,
       category: item.fields.category,
-      content: documentToHtmlString(item.fields.content),
+      content: documentToHtmlString(item.fields.content, options),
       date: new Date(item.fields.date).toLocaleDateString(),
       image: {
-        src: item.fields.image.fields.file.url,
-        alt: item.fields.image.description,
+        src: item.fields.image?.fields.file.url,
+        alt: item.fields.image?.description,
       },
     },
   }));
