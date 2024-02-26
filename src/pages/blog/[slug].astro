@@ -17,8 +17,16 @@ export async function getStaticPaths() {
     renderNode: {
       "embedded-asset-block": (node) => {
         const { title, file } = node.data.target.fields;
+        const { fileType } = node.data.target.fields;
         const { url } = file;
-        return `<img src="${url}" alt="${title}" />`;
+        if (file.contentType === 'video/mp4') {
+          return `<video width="100%" class="aspect-video" controls autoplay>
+        <source src="${url}" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>`
+        } else {
+          return `<img src="${url}" alt="${title}" />`;
+        }
       },
     },
   };
@@ -36,17 +44,14 @@ export async function getStaticPaths() {
         src: item.fields.image?.fields.file.url,
         alt: item.fields.image?.description,
       },
+      item
     },
   }));
   return pages;
 }
 
-console.log(Astro.props);
-
 //Astro props
-const { title, date, author, content, image, category } = Astro.props;
-
-console.log(Astro.props);
+const { title, date, author, content, image, category, item } = Astro.props;
 
 import "../../styles/blogPost.css";
 ---
