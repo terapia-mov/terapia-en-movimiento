@@ -34,23 +34,22 @@ import { Icon } from "astro-icon";
   </header>
   <main class="px-8% md:px-15% py-20">
     <!--About Section -->
-    <div class="w-full md:my-20 sm:flex items-center gap-12">
+    <div class="w-full md:my-20 items-center gap-12 grid sm:grid-cols-2">
       <!--About Image -->
       <div class="relative">
-        <img
-          src="/images/about.jpg"
-          alt="Person writing in journal in a conference/class"
-          class="w-full relative z-10 rounded-full aspect-square sm:w-96"
-        />
+        <video width="100%" class="aspect-video relative z-20" controls autoplay>
+          <source src="/videos/jonathan.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div
           id="about-image-accent"
-          class="absolute inset-0 z-0 rounded-full aspect-square bg-orange -translate-x-2 translate-y-2"
+          class="absolute inset-0 z-0 w-full h-full bg-orange -translate-x-2 translate-y-2"
         >
         </div>
       </div>
       <!--About Content -->
       <div
-        class="py-10 md:w-3/4 flex flex-col justify-center items-start gap-2"
+        class="py-10 flex flex-col justify-center items-start gap-2"
       >
         <h4 class="font-semibold text-blue text-xs md:text-base">
           Acerca de Nosotros
