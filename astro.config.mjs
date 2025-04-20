@@ -12,4 +12,6 @@ export default defineConfig({
     tailwind(),
     image({ serviceEntryPoint: "@astrojs/image/sharp" }),
   ],
+  site: 'https://terapia-mov.github.io',
+  base: 'terapia-en-movimiento',
 });
